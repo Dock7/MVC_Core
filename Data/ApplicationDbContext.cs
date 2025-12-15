@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MVC_Core.Models;
 
 namespace MVC_Core.Data
 {
@@ -9,5 +10,7 @@ namespace MVC_Core.Data
             : base(options)
         {
         }
-    }
+
+        public DbSet<Pais> Paises { get; set; }
+        }
 }
