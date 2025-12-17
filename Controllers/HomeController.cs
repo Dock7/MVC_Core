@@ -18,7 +18,7 @@ namespace MVC_Core.Controllers
 
         public IActionResult Index()
         {
-            List<string> paises = Repositorio.ObtenerPaises();
+            List<Pais> paises = Repositorio.ObtenerTodos();
             return View(paises);
         }
 

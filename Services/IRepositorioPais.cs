@@ -1,7 +1,9 @@
-﻿namespace MVC_Core.Services
+﻿using MVC_Core.Models;
+
+namespace MVC_Core.Services
 {
     public interface IRepositorioPais
     {
-        List<string> ObtenerPaises();
+        public List<Pais> ObtenerTodos();
     }
 }

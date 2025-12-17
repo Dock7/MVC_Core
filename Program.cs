@@ -20,7 +20,7 @@ namespace MVC_Core
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<IRepositorioPais, PaisRepositorioEnMemoria>();
+            builder.Services.AddScoped<IRepositorioPais, PaisRepositorioEF>();
 
             var app = builder.Build();
 
@@ -28,7 +28,7 @@ namespace MVC_Core
             if (app.Environment.IsDevelopment())
             {
                 app.UseMigrationsEndPoint();
-            }
+            } 
             else
             {
                 app.UseExceptionHandler("/Home/Error");
